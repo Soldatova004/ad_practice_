@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рекламное агентство "МедиаВзгляд"</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">МедиаВзгляд</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="#services">Услуги</a>
+                <a class="nav-link" href="#about">О нас</a>
+                <a class="nav-link" href="#contact">Контакты</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главный баннер -->
+    <section class="hero-section text-center text-white">
+        <div class="container">
+            <h1 class="display-4">Мы создаем эффективную рекламу</h1>
+            <p class="lead">Привлекаем клиентов и увеличиваем ваши продажи</p>
+            <button class="btn btn-primary btn-lg" onclick="showConsultation()">Заказать консультацию</button>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Наши услуги</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Создание сайтов</h5>
+                            <p class="card-text">Разрабатываем современные и удобные сайты любой сложности.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Таргетированная реклама</h5>
+                            <p class="card-text">Настраиваем рекламу в социальных сетях для привлечения целевой аудитории.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">SMM-продвижение</h5>
+                            <p class="card-text">Комплексное ведение социальных сетей вашего бизнеса.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">О нашем агентстве</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Агентство "МедиаВзгляд" работает на рынке рекламных услуг с 2018 года. Мы помогаем малым и средним бизнесам увеличивать продажи с помощью digital-маркетинга.</p>
+                </div>
+                <div class="col-md-6">
+                    <p>Наша команда - это опытные маркетологи, дизайнеры и разработчики, которые знают, как добиваться результатов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Свяжитесь с нами</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="3" placeholder="Сообщение"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <p><strong>Адрес:</strong> г. Калининград, ул. Примерная, 123</p>
+                    <p><strong>Телефон:</strong> +7 (4012) 123-456</p>
+                    <p><strong>Email:</strong> info@mediavzglyad.ru</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <p>&copy; 2025 Рекламное агентство "МедиаВзгляд". Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
