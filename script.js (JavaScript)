@@ -1,0 +1,54 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Проверка авторизации
+    if (!checkAuth()) return;
+
+    // Показываем имя пользователя
+    const userName = localStorage.getItem('userName') || 'Пользователь';
+    document.getElementById('userDisplayName').textContent = userName;
+
+    // Обработка навигации
+    document.querySelectorAll('.nav-item').forEach(item => {
+        if (item.classList.contains('logout-btn')) return;
+
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // Убираем активный класс у всех пунктов меню
+            document.querySelectorAll('.nav-item').forEach(nav => {
+                nav.classList.remove('active');
+            });
+
+            // Добавляем активный класс текущему пункту
+            this.classList.add('active');
+
+            // Скрываем все секции
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Показываем выбранную секцию
+            const sectionId = this.getAttribute('data-section') + '-section';
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+
+            // Обновляем заголовок
+            document.getElementById('section-title').textContent = this.textContent.trim();
+        });
+    });
+
+    // Обработка выхода
+    document.querySelectorAll('.logout-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('username');
+            localStorage.removeItem('userRole');
+            localStorage.removeItem('userName');
+            window.location.href = 'login.html';
+        });
+    });
+
+    // По умолчанию показываем dashboard-section
+    document.querySelector('.nav-item[data-section="dashboard"]').click();
+});
